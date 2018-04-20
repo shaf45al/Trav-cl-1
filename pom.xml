@@ -51,7 +51,7 @@
 	<repositories>
 		<repository>
 			<id>ras_planirovki</id>
-			<url>https://github.com/DamirNurm/Trav-cl</url>
+			<url>https://github.com/damirnurm/Trav-cl</url>
 		</repository>
 	</repositories>
 </project>
