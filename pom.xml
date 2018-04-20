@@ -7,9 +7,6 @@
 	<groupId>com.sanifrey</groupId>
 	<artifactId>shor2</artifactId>
 	<version>1.0-SNAPSHOT</version>
-	<modules>
-		<module>project-name</module>
-	</modules>
 	<packaging>pom</packaging>
 
 	<name>maven_project</name>
