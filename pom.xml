@@ -4,16 +4,16 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.sanifrey</groupId>
-	<artifactId>shor2</artifactId>
+	<groupId>com.DamirNurm</groupId>
+	<artifactId>Trav-cl</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<modules>
 		<module>project-name</module>
 	</modules>
 	<packaging>pom</packaging>
 
-	<name>codecov-travis-maven-test</name>
-	<url>https://github.com/Sanifrey/shor2</url>
+	<name>RaschetPlanirovki</name>
+	<url>http://maven.apache.org</url>
 
 	<dependencies>
 		<dependency>
@@ -23,7 +23,6 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -49,5 +48,10 @@
 			</plugin>
 		</plugins>
 	</build>
-
+	<repositories>
+		<repository>
+			<id>Ras_Planirovka</id>
+			<url>https://github.com/DamirNurm/Trav-cl</url>
+		</repository>
+	</repositories>
 </project>
