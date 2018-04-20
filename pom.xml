@@ -5,15 +5,15 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.sanifrey</groupId>
-	<artifactId>shor2</artifactId>
+	<artifactId>Trav-cl</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<modules>
 		<module>project-name</module>
 	</modules>
 	<packaging>pom</packaging>
 
-	<name>codecov-travis-maven-test</name>
-	<url>https://github.com/Sanifrey/shor2</url>
+	<name>maven</name>
+	<url>http://maven.apache.org</url>
 
 	<dependencies>
 		<dependency>
