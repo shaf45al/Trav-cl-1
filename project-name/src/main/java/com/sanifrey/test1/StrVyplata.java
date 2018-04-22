@@ -1,0 +1,20 @@
+package com.sanifrey.test1;
+
+/**  * Устанавливаем принадлежность класса к пакету  */ 
+
+/**  * Подключаем библиотеки  */ import java.awt.Component; import java.awt.GridLayout; import javax.swing.Box; import javax.swing.BoxLayout; import javax.swing.JFrame; import javax.swing.JLabel; import javax.swing.JOptionPane; import javax.swing.JPanel; 
+ 
+/**   * Объявляем public класс, в котором осуществляется предоставление информации относительно страховой выплаты  */ public class StrVyplata{       /**       * Объявляем и инициализируем переменную типа String для полученного дохода       */   String poluchD="0";     /**     * Объявляем конструктор класса    */  protected StrVyplata(){  }    /**    * Метод zapusk для инициализации и отображения фрейма   */  protected void zapusk(){   /**   * Создаём объект класса JFrame   */   JFrame s=new JFrame();      /**    * если isRun1 равно false (страховая выплата еще не была получена) выполняется блок   * кода внутри фигурных скобок    */   if(LichnyKab.isRun1==false){    /**     * переменной isRun1 класса LichnyKab задается значение true, т.к. счиатем, что   * страховая выплата получена     */    LichnyKab.isRun1=true;        /**     * Переменной poluchD присваивается строка, введенная пользователем в   * диалоговом окне ввода данных     */    poluchD = JOptionPane.showInputDialog(null, "Введите полученный ущерб", null,  JOptionPane.INFORMATION_MESSAGE);        /**     * Если значение переменной poluchD равно "" (пользователь не ввел полученный  
+    * ущерб), то окно "Страховая выплата" не отобразится, а переменной isRun1   * класса LichnyKab будет задано значение false,      * т.к. счиатем, что страховая выплата не получена     */    if (poluchD.equals("")) {     LichnyKab.isRun1=false;        s.setVisible(false);    }    else {         /**      * Выполняем настройку окна "Страховая выплата"      */     s.setTitle("Страховая выплата"); 
+     s.setSize(600,400);       /**      * Размещаем окно по середине экрана       */     s.setLocationRelativeTo(null);                          s.setLayout(new GridLayout());        /**      * Создаем компоненты       * label класса JLabel,       * strVyplataL класса JLabel,       * pravila класса JLabel,      * pravila1 класса JLabel,      * и компонент-контерйнер panel класса JPanel, который будет содержать   * вышеперечисленные компоненты      */     JPanel panel=new JPanel();     panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS)); 
+ 
+    JLabel label=new JLabel("Сумма страховой выплаты, руб:");     /**      * В метку strVyplataL устанавливается значение, полученное из метода       * UznatStrVyp(int poluchD)      */     JLabel strVyplataL=new   JLabel(String.valueOf(UznatStrVyp(Integer.parseInt(poluchD)))); 
+ 
+    JLabel pravila=new JLabel("Для получения страховой выплаты");      JLabel pravila1=new  JLabel("обратитесь в приемный отдел по адресу: ул.Гафури, д.76"); 
+ 
+    /**      * Устанавливаем выравнивание компонентов label, strVyplataL, pravila и   * pravila1 (по середине)      */     label.setAlignmentX(Component.CENTER_ALIGNMENT);      strVyplataL.setAlignmentX(Component.CENTER_ALIGNMENT);      pravila.setAlignmentX(Component.CENTER_ALIGNMENT);      pravila1.setAlignmentX(Component.CENTER_ALIGNMENT);  
+ 
+    /**      * Добавляем компоненты label, strVyplataL, pravila и pravila1 на панель   * panel      */     panel.add(Box.createVerticalGlue());         panel.add(label);     /**      * Вставляем пружину      */     panel.add(Box.createVerticalGlue());     
+    panel.add(strVyplataL);     panel.add(Box.createVerticalGlue());     panel.add(pravila);     panel.add(pravila1);     panel.add(Box.createVerticalGlue());  
+ 
+    s.add(panel);     s.setVisible(true);    }   }  }    /**   * Метод UznatStrVyp(int poluchD)   */  protected int UznatStrVyp(int poluchD){   /**    * Сохраняем переданное значение в качестве полученного дохода     * с помощью метода setdPol(int poluchD) класса Formuly    */   OsnF.obj2.setdPol(poluchD);   /**    * Возвращаем значение, полученное из метода RaschitatSV() класса Formuly    */   return OsnF.obj2.RaschitatSV();  } }
