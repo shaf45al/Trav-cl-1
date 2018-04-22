@@ -38,8 +38,8 @@
 	</build>
 	<repositories>
 		<repository>
-			<id>ras_planirovki</id>
-			<url>https://github.com/damirnurm/Trav-cl</url>
+			<id>strCalc</id>
+			<url>https://github.com/shaf45al/Trav-cl-1</url>
 		</repository>
 	</repositories>
 </project>
